@@ -12,7 +12,7 @@ module.exports.optionCreate = async (req, res) => {
   const newOption = new Options();
   newOption.option = req.body.option;
   newOption.question_id = req.params.question_id;
-  newOption.link_to_vote = `http://localhost:8000/options/${newOption.id}/add_vote`;
+  newOption.link_to_vote = `https://polling-system-api-nodejs-dannysolomon.onrender.com/options/${newOption.id}/add_vote`;
 
   await newOption.save().catch((err) => {
     return res.send("Could not save option to db");

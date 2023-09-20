@@ -30,7 +30,7 @@ module.exports.questionCreate = async (req, res) => {
     return res.send("Couldnt create question ", err);
   });
 
-  return res.send("Question created successfully");
+  return res.send(`Question created successfully ${newquestion.id}`);
 };
 
 //view a particular question
